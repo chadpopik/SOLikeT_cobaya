@@ -1,0 +1,52 @@
+likelihood:
+  tsz: !!python/name:soliket.szlike.szlike.TSZLikelihood ''
+params:
+  Omega_m:
+    value: 0.25
+  Omega_b:
+    value: 0.044
+  hh:
+    value: 0.7
+  Omega_L:
+    value: 0.75
+  rhoc_0:
+    value: 277.525
+  C_OVER_HUBBLE:
+    value: 2997.9
+  XH:
+    value: 0.76
+  v_rms:
+    value: 0.00106
+  gnfw_P0:
+    prior:
+      min: 0.1
+      max: 30.0
+    ref: 10.0
+    latex: P_0
+  gnfw_bt_tsz:
+    prior:
+      min: 1.0
+      max: 10.0
+    ref: 4.8
+    latex: \beta_t
+  gnfw_A2h_tsz:
+    prior:
+      min: 0.01
+      max: 5.0
+    ref: 1.0
+    latex: A_{t2h}
+sampler:
+  mcmc:
+    Rminus1_stop: 0.5
+    max_tries: 100d
+    output_every: 300s
+sz_data_file: /home/cemoser/SOLikeT_emcee_test/example_gnfw_projections.txt
+beam_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/beam_f150_daynight.txt
+beam_response: /home/cemoser/Repositories/SOLikeT/soliket/szlike/act_planck_s08_s18_cmb_f150_daynight_response_tsz.txt
+cov_ksz_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/cov_diskring_ksz_varweight_bootstrap.txt
+cov_tsz_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/cov_diskring_tsz_varweight_bootstrap.txt
+redshift: 0.55
+mass_halo_mean_Msol: 10**13.
+frequency_GHz: 150.0
+input_model: gnfw
+output: tsz_fix_xc

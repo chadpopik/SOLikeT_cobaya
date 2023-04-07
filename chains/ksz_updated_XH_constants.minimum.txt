@@ -1,0 +1,2 @@
+#        weight    minuslogpost       gnfw_rho0     gnfw_bt_ksz    gnfw_A2h_ksz   minuslogprior minuslogprior__0            chi2       chi2__ksz
+              1      -141.46264       4.0144564       5.5137142       1.5661694       5.4140984        5.4140984      -293.75349      -293.75349

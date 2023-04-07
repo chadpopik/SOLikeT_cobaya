@@ -1,0 +1,18 @@
+ -log(Like) = -144.3966465946844
+  chi-sq    = -288.7932931893688
+
+    9  1.407266707e+01   gnfw_P0         P_0
+   10  4.155686618e-01   gnfw_xc_tsz     x_{c,t}
+   11  3.649525634e+00   gnfw_bt_tsz     \beta_t
+   12  8.006299346e-01   gnfw_A2h_tsz    A_{t2h}
+
+    1  0.25              Omega_m         Omega\ m
+    2  0.044             Omega_b         Omega\ b
+    3  0.7               hh              hh
+    4  0.75              Omega_L         Omega\ L
+    5  277.525           rhoc_0          rhoc\ 0
+    6  2997.9            C_OVER_HUBBLE   C\ OVER\ HUBBLE
+    7  0.76              XH              XH
+    8  0.00106           v_rms           v\ rms
+
+   13  -3.031782305e+02  chi2__tsz       \chi^2_{\rm tsz}

@@ -1,0 +1,2 @@
+#        weight    minuslogpost       gnfw_rho0     gnfw_bt_ksz    gnfw_A2h_ksz   minuslogprior minuslogprior__0            chi2 chi2__soliket.szlike.KSZLikelihood
+              1       -142.8003       3.1864411       3.4549398               1       5.4140984        5.4140984      -296.42879                         -296.42879

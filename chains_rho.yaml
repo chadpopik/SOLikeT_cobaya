@@ -1,0 +1,66 @@
+redshift: 0.55 
+mass_halo_mean_Msol: 10**13.
+frequency_GHz: 150.
+#input_model: "gnfw" #or "obb"
+
+#likelihood:
+#  ksz: import_module('soliket.szlike').KSZLikelihood  
+
+likelihood:
+   soliket.szlike.KSZLikelihood:
+      sz_data_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/gnfw_test_projections.txt
+      beam_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/beam_f150_daynight.txt
+      transform_type: FFT
+      beam_response: False
+      cov_ksz_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/cov_diskring_ksz_varweight_bootstrap.txt
+      twohalo_term: /home/cemoser/Repositories/SOLikeT/soliket/szlike/twohalo_cmass_average.txt
+  
+
+params:
+  Omega_m:
+    value: 0.25
+  Omega_b:
+    value: 0.044
+  hh:
+    value: 0.7
+  Omega_L:
+    value: 0.75
+  rhoc_0:
+    value: 2.77525e2
+  C_OVER_HUBBLE:
+    value: 2997.9
+  XH:
+    value: 0.76 #hydrogen fraction
+  v_rms:
+    value: 1.06e-3 #v_rms/c
+
+  gnfw_rho0:
+    prior:
+      min: 1.0
+      max: 6.0
+    ref: 3.1864410705359125
+    latex: \log_{10}\rho_0
+  gnfw_bt_ksz:
+    prior:
+      min: 1.0
+      max: 10.0
+    ref: 3.45493977635
+    latex: \beta_k
+  gnfw_A2h_ksz:
+    prior:
+      min: 0.01
+      max: 5.0
+    ref: 1.0
+    latex: A_{k2h}
+
+sampler:
+  mcmc:
+    Rminus1_stop: 0.01
+    max_tries: 200d
+    output_every: 300s
+  #minimize:
+  #   ignore_prior: True
+
+output: chains/ksz_FFT_transform
+debug: False
+

@@ -1,0 +1,89 @@
+theory: null
+likelihood:
+  soliket.szlike.KSZLikelihood:
+    sz_data_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/gnfw_test_projections.txt
+    beam_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/beam_f150_daynight.txt
+    transform_type: FFT
+    beam_response: false
+    cov_ksz_file: /home/cemoser/Repositories/SOLikeT/soliket/szlike/cov_diskring_ksz_varweight_bootstrap.txt
+    twohalo_term: /home/cemoser/Repositories/SOLikeT/soliket/szlike/twohalo_cmass_average.txt
+    redshift: 0.55
+    mass_halo_mean_Msol: 10000000000000.0
+    frequency_GHz: 150.0
+    name: Gaussian
+    datapath: null
+    covpath: null
+    ncovsims: null
+    type: []
+    speed: -1
+    stop_at_error: false
+    version: null
+    input_params:
+    - Omega_m
+    - Omega_b
+    - hh
+    - Omega_L
+    - rhoc_0
+    - C_OVER_HUBBLE
+    - XH
+    - v_rms
+    - gnfw_rho0
+    - gnfw_bt_ksz
+    - gnfw_A2h_ksz
+    output_params: []
+params:
+  Omega_m:
+    value: 0.25
+  Omega_b:
+    value: 0.044
+  hh:
+    value: 0.7
+  Omega_L:
+    value: 0.75
+  rhoc_0:
+    value: 277.525
+  C_OVER_HUBBLE:
+    value: 2997.9
+  XH:
+    value: 0.76
+  v_rms:
+    value: 0.00106
+  gnfw_rho0:
+    prior:
+      min: 1.0
+      max: 6.0
+    ref: 3.1864410705359125
+    latex: \log_{10}\rho_0
+  gnfw_bt_ksz:
+    prior:
+      min: 1.0
+      max: 10.0
+    ref: 3.45493977635
+    latex: \beta_k
+  gnfw_A2h_ksz:
+    prior:
+      min: 0.01
+      max: 5.0
+    ref: 1.0
+    latex: A_{k2h}
+sampler:
+  minimize:
+    method: bobyqa
+    ignore_prior: false
+    max_evals: 1e6d
+    best_of: 2
+    confidence_for_unbounded: 0.9999995
+    seed: null
+    override_scipy: null
+    override_bobyqa:
+      rhoend: 0.05
+    covmat: null
+    covmat_params: null
+    version: null
+    fallback_covmat_scale: 4
+redshift: 0.55
+mass_halo_mean_Msol: 10**13.
+frequency_GHz: 150.0
+output: ksz_Hankel_transform
+minimize: true
+version: 3.2.2
