@@ -1,0 +1,2 @@
+#        weight    minuslogpost         gnfw_P0     gnfw_bt_tsz    gnfw_A2h_tsz   minuslogprior minuslogprior__0            chi2 chi2__soliket.szlike.TSZLikelihood
+              1       -143.7275       10.311596       4.9327879       0.4315635        7.202519         7.202519      -301.86003                         -301.86003
