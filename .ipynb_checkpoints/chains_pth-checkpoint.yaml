@@ -8,12 +8,12 @@ frequency_GHz: 150.
 
 likelihood:
    soliket.szlike.TSZLikelihood:
-      sz_data_file: /global/homes/c/cpopik/Packages/SOLikeT/soliket/szlike/gnfw_test_projections.txt
-      beam_file: /global/homes/c/cpopik/Packages/SOLikeT/soliket/szlike/beam_f150_daynight.txt
+      sz_data_file: /global/homes/c/cpopik/Git/SOLikeT/soliket/szlike/gnfw_test_projections.txt
+      beam_file: /global/homes/c/cpopik/Git/SOLikeT/soliket/szlike/beam_f150_daynight.txt
       transform_type: Hankel
-      beam_response: /global/homes/c/cpopik/Packages/SOLikeT/soliket/szlike/act_planck_s08_s18_cmb_f150_daynight_response_tsz.txt
-      cov_tsz_file: /global/homes/c/cpopik/Packages/SOLikeT/soliket/szlike/cov_diskring_tsz_varweight_bootstrap.txt
-      twohalo_term: /global/homes/c/cpopik/Packages/SOLikeT/soliket/szlike/twohalo_cmass_average.txt
+      beam_response: /global/homes/c/cpopik/Git/SOLikeT/soliket/szlike/act_planck_s08_s18_cmb_f150_daynight_response_tsz.txt
+      cov_tsz_file: /global/homes/c/cpopik/Git/SOLikeT/soliket/szlike/cov_diskring_tsz_varweight_bootstrap.txt
+      twohalo_term: /global/homes/c/cpopik/Git/SOLikeT/soliket/szlike/twohalo_cmass_average.txt
 
 params:
   Omega_m:
